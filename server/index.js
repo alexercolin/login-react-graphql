@@ -1,26 +1,30 @@
+const { users } = require("./db");
 const { ApolloServer, gql } = require("apollo-server");
 
 const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
+  type Users {
+    id: ID!
+    slug: String!
+    username: String
+    password: String
+    attempts: Int
   }
 
   type Query {
-    books: [Book]
+    users: [Users]
+    user(slug: String!): Users
   }
 `;
 
-const books = [
-  {
-    title: "The Awakenin",
-    author: "oi",
-  },
-];
-
+//nos resolvers que vai a lógica/regras de negócio
 const resolvers = {
   Query: {
-    books: () => books,
+    users: () => users,
+    user: (parent, args, ctx) => {
+      return users.find((user) => {
+        return user.slug === args.slug;
+      });
+    },
   },
 };
 
