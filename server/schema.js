@@ -16,7 +16,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(username: String, password: String): Users
-    resetAttempts(username: String): Users
+    resetLoginAttempts(username: String): Users
   }
 `;
 
