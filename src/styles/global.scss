@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --container-background: #35394a;
+  --input-color: #393d52;
+  --title-color: #ffff;
+  --secondary-color: #bb6dec;
+}
+
+html,
+body,
+div#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(100%, #ea5c54),
+    color-stop(0%, #bb6dec)
+  );
+}
+
+h3 {
+  color: #afb1be;
+}

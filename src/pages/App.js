@@ -1,5 +1,6 @@
-import LoginForm from "./components/LoginForm";
+import LoginForm from "../components/LoginForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import "../styles/global.scss";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/",
