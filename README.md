@@ -3,7 +3,7 @@
 </h1>
 
 <h1 align="center">
-    <img width="400px"  src="https://ik.imagekit.io/ins9ecquwr9/quiz-game_f-4nGfyDx.gif?updatedAt=1633779595065">
+    <img width="600px"  src="https://ik.imagekit.io/ins9ecquwr9/login_3IN4A8tWK.gif?updatedAt=1634310687812">
 </h1>
 
 # Summary
