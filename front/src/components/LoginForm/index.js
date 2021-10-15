@@ -1,6 +1,6 @@
 import "./styles.scss";
 import UserArea from "../UserArea";
-import { useState } from "react";
+import { useState, memo } from "react";
 import { useQuery, useMutation, gql } from "@apollo/client";
 
 const LOGIN_USER = gql`
@@ -20,7 +20,7 @@ const ADD_NEW_USER = gql`
   }
 `;
 
-const LoginForm = () => {
+const LoginForm = memo(() => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [login, setLogin] = useState(false);
@@ -91,6 +91,6 @@ const LoginForm = () => {
       )}
     </div>
   );
-};
+});
 
 export default LoginForm;
