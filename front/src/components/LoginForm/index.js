@@ -2,23 +2,7 @@ import "./styles.scss";
 import UserArea from "../UserArea";
 import { useState, memo } from "react";
 import { useQuery, useMutation, gql } from "@apollo/client";
-
-const LOGIN_USER = gql`
-  query ($username: String, $password: String) {
-    login(username: $username, password: $password) {
-      username
-      password
-    }
-  }
-`;
-
-const ADD_NEW_USER = gql`
-  mutation ($username: String, $password: String) {
-    addUser(username: $username, password: $password) {
-      username
-    }
-  }
-`;
+import {LOGIN_USER, ADD_NEW_USER} from "../Queries/queries"
 
 const LoginForm = memo(() => {
   const [username, setUsername] = useState();
