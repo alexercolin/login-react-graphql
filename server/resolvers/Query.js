@@ -7,6 +7,13 @@ const Query = {
       return user.slug === args.slug;
     });
   },
+  login: (parent, { username, password }, { users }) => {
+    return users.find((user) => {
+      return user.username === username && user.password === password
+        ? true
+        : false;
+    });
+  },
 };
 
 module.exports = Query;
