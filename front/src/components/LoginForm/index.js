@@ -1,7 +1,7 @@
 import "./styles.scss";
 import UserArea from "../UserArea";
 import { useState, memo } from "react";
-import { useQuery, useMutation, gql } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import {LOGIN_USER, ADD_NEW_USER} from "../Queries/queries"
 
 const LoginForm = memo(() => {
