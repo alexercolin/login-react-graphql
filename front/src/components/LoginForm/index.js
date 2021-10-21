@@ -2,11 +2,11 @@ import "./styles.scss";
 import UserArea from "../UserArea";
 import { useState, memo } from "react";
 import { useQuery, useMutation } from "@apollo/client";
-import {LOGIN_USER, ADD_NEW_USER} from "../Queries/queries"
+import { LOGIN_USER, ADD_NEW_USER } from "../Queries/queries";
 
 const LoginForm = memo(() => {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [login, setLogin] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -27,9 +27,9 @@ const LoginForm = memo(() => {
   const handleLogin = () => {
     if (data.login === null) {
       setErrorMessage(true);
-    } else {
-      setLogin(true);
+      return;
     }
+    setLogin(true);
   };
 
   const createUser = () => {
